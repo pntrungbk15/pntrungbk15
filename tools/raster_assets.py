@@ -26,6 +26,19 @@ PROJECTS = [
     dict(slug="legal-intelligence", num="04", name="Vietnamese Legal Intelligence",
          kind="Legal research workstation", chips=["3,765 documents", "120,000 citations in Neo4j", "BM25 + E5 hybrid retrieval"],
          dark="vli-graph_relations-dark.png", light="vli-graph_relations-light.png"),
+    # re-implementations of industry work: labelled as such on the card itself
+    dict(slug="docflow-idp", num="05 · RE-IMPLEMENTATION", name="DocFlow IDP",
+         kind="Intelligent document processing for shipping documents",
+         chips=["Document AI · OCR · VLM backends", "Values traced to page and box", "Human-in-the-loop review"],
+         dark="docflow-extraction-dark.png", light="docflow-extraction-light.png"),
+    dict(slug="tshirt-quality", num="06 · RE-IMPLEMENTATION", name="T-Shirt Quality Inspection",
+         kind="Garment geometry and print verification",
+         chips=["Industrial computer vision", "10-stage pipeline · 7 explained checks", "SSIM and ΔE print comparison"],
+         dark="tshirt-inspection-dark.png", light="tshirt-final-pass.png"),
+    dict(slug="date-code", num="07 · RE-IMPLEMENTATION", name="Date Code Inspector",
+         kind="MFG and EXP date reading on packaging",
+         chips=["Date-code recognition", "Dot-matrix character segmentation", "Date validation · GOOD / NG"],
+         dark="datecode-inspection-dark.png", light="datecode-carton-good.png"),
 ]
 
 STACK = [
@@ -173,19 +186,21 @@ async def render(page, html, path, w, fmt):
     print(path.name, im.size, path.stat().st_size)
 
 
-async def main(out):
+async def main(out, only=()):
     (out / "projects").mkdir(parents=True, exist_ok=True)
     env = dict(os.environ, LD_LIBRARY_PATH=os.environ.get("CHROME_LIBS", ""))
     async with async_playwright() as pw:
         b = await pw.chromium.launch(env=env)
         page = await b.new_page()
         for p in PROJECTS:
+            if only and p["slug"] not in only:
+                continue
             for theme in ("dark", "light"):
                 for narrow in (False, True):
                     html, w, h = card_html(p, theme, narrow)
                     suffix = "-narrow" if narrow else ""
                     await render(page, html, out / "projects" / f"{p['slug']}-{theme}{suffix}.webp", w, "webp")
-        for theme in ("dark", "light"):
+        for theme in ("dark", "light") if not only else ():
             for narrow in (False, True):
                 html, w = stack_html(theme, narrow)
                 await render(page, html, out / f"stack-{theme}{'-narrow' if narrow else ''}.png", w, "png")
@@ -193,4 +208,5 @@ async def main(out):
 
 
 if __name__ == "__main__":
-    asyncio.run(main(Path(sys.argv[1])))
+    # optional project slugs after the output folder render only those cards
+    asyncio.run(main(Path(sys.argv[1]), set(sys.argv[2:])))

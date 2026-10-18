@@ -90,14 +90,58 @@ with 16 local ONNX models across 11 tasks ·
 Independent re-implementations of systems I built professionally. They use synthetic data only and contain no
 production code or customer data.
 
+<a href="https://github.com/pntrungbk15/docflow-idp">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/projects/docflow-idp-dark-narrow.webp">
+  <source media="(max-width: 600px)" srcset="assets/projects/docflow-idp-light-narrow.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/projects/docflow-idp-dark.webp">
+  <img src="assets/projects/docflow-idp-light.webp" width="100%" alt="DocFlow IDP: the extraction workspace with a bill of lading, every extracted value outlined on the page and listed with its confidence, page and box">
+</picture>
+</a>
+
+**[DocFlow IDP](https://github.com/pntrungbk15/docflow-idp)** turns a mixed PDF packet of shipping documents into
+validated structured data. It classifies and segments the pages, extracts schema fields, locates each value with a
+separate bounding-box pass, checks business rules (totals, dates, ISO 6346 container check digits) and routes doubtful
+values to a human review queue with an audit trail. Every model call goes through one backend contract, so an offline
+baseline and VLM backends are interchangeable.
+
+<a href="https://github.com/pntrungbk15/tshirt-quality-in">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/projects/tshirt-quality-dark-narrow.webp">
+  <source media="(max-width: 600px)" srcset="assets/projects/tshirt-quality-light-narrow.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/projects/tshirt-quality-dark.webp">
+  <img src="assets/projects/tshirt-quality-light.webp" width="100%" alt="T-Shirt Quality Inspection: the inspection page with the pipeline stage strip, an annotated T-shirt and the results panel with seven checks">
+</picture>
+</a>
+
+**[T-Shirt Quality Inspection](https://github.com/pntrungbk15/tshirt-quality-in)** checks a printed T-shirt from one
+top-down photograph: QR job identification, millimetre calibration, garment segmentation and landmarks, size
+measurement, print alignment to the artwork, and SSIM and ΔE difference analysis. Seven checks decide PASS or FAIL, and
+each one states its value, limit and reason. The re-implementation uses deterministic, weight-free computer vision on
+synthetic photographs and is built with FluentQt.
+
+<a href="https://github.com/pntrungbk15/mfg-exp-reading">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/projects/date-code-dark-narrow.webp">
+  <source media="(max-width: 600px)" srcset="assets/projects/date-code-light-narrow.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/projects/date-code-dark.webp">
+  <img src="assets/projects/date-code-light.webp" width="100%" alt="Date Code Inspector: a carton's dot-matrix date code read character by character, with the extracted MFG and EXP dates, the validation checklist and a GOOD verdict">
+</picture>
+</a>
+
+**[Date Code Inspector](https://github.com/pntrungbk15/mfg-exp-reading)** reads the production and expiry dates
+printed on cartons, bottles, pouches and cans, character by character, then validates them against the product's rules
+and decides GOOD or NG with the failed rule named. On its synthetic demo set, 22 of 22 verdicts match the ground truth
+and 597 of 600 characters are read correctly. Built with FluentQt.
+
+**More re-implementations**
+
 | Project | What it does |
 |---|---|
 | **[SNY Septa Line Inspection](https://github.com/pntrungbk15/sny-septa-line-inspection)** | Surface inspection of a coated technical knit with seven cameras |
-| **[DocFlow IDP](https://github.com/pntrungbk15/docflow-idp)** | Turns shipping-document PDFs into validated structured data, with a human-in-the-loop review workspace |
 | **[Betty](https://github.com/pntrungbk15/betty-ai)** | An agentic RAG assistant that turns a conversation and a screenshot into a structured, estimated work ticket |
 | **[ScanDoc AI](https://github.com/pntrungbk15/scandoc-ai)** | Document AI for scanned logistics documents: 88.9&nbsp;% field accuracy on held-out synthetic scans |
 | **[WebIntel Logistics](https://github.com/pntrungbk15/webintel-logistics)** | Web crawling with layered structured extraction: 97.5&nbsp;% field accuracy on held-out synthetic sites |
-| **[T-Shirt Quality Inspection](https://github.com/pntrungbk15/tshirt-quality-in)**, **[Date Code Inspector](https://github.com/pntrungbk15/mfg-exp-reading)** | Print and date-code inspection |
 
 **Research implementations.** Results and write-ups of detection models I implemented:
 [YOLO](https://github.com/pntrungbk15/YOLO) (v1 to v11 and YOLOX),
