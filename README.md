@@ -47,7 +47,7 @@ Ultralytics and Anomalib training with parity-checked ONNX exports (55 of 60 mod
 **[FluentQt](https://github.com/pntrungbk15/fluentqt-showcase)** is a Fluent Design UI framework for PyQt5 in
 Community and Pro editions, maintained since 2022. Community has 177 widgets in 12 families, theming, frameless
 windows, six languages and SQLite persistence. Pro adds data grids, charts, a node editor and computer-vision UI.
-Every application on this page is built on it.
+The other seven featured applications are built on it.
 
 <a href="https://github.com/pntrungbk15/comic-translator-showcase">
 <picture>
@@ -76,12 +76,61 @@ legal research workstation. It parses 3,765 legal documents into more than 100,0
 citations in a Neo4j knowledge graph. Hybrid retrieval combines BM25, multilingual E5 and rank fusion. Answers come
 from a local LLM, and each one is cited, checked against its sources, or declined.
 
-**Also independent:**
-[AI Annotation Workbench](https://github.com/pntrungbk15/annotation-workbench-showcase), computer-vision annotation
-with 16 local ONNX models across 11 tasks ·
-[Fluent Data Studio](https://github.com/pntrungbk15/fluent-data-studio), AI-assisted data analysis on DuckDB ·
-[Audio Story](https://github.com/pntrungbk15/audio-story-showcase), an AI audio-storytelling studio ·
-[ChessForge](https://github.com/pntrungbk15/chessforge-showcase), a chess workstation with a PyTorch self-play lab.
+<a href="https://github.com/pntrungbk15/fluent-data-studio">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/projects/data-studio-dark-narrow.webp">
+  <source media="(max-width: 600px)" srcset="assets/projects/data-studio-light-narrow.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/projects/data-studio-dark.webp">
+  <img src="assets/projects/data-studio-light.webp" width="100%" alt="Fluent Data Studio: the Analyze workspace with a generated chart of the top five products by revenue growth, its encodings in the inspector and its rows below">
+</picture>
+</a>
+
+**[Fluent Data Studio](https://github.com/pntrungbk15/fluent-data-studio)** answers plain-language questions about
+data in a way you can check. It copies files, databases and web APIs into a local DuckDB workspace, splits a request
+into requirements and runs each as a validated plan of typed operations, so every result shows what it answers and the
+SQL behind it. Charts stay editable, and kept results go onto a report.
+
+<a href="https://github.com/pntrungbk15/annotation-workbench-showcase">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/projects/annotation-workbench-dark-narrow.webp">
+  <source media="(max-width: 600px)" srcset="assets/projects/annotation-workbench-light-narrow.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/projects/annotation-workbench-dark.webp">
+  <img src="assets/projects/annotation-workbench-light.webp" width="100%" alt="AI Annotation Workbench: YOLOX-S detection proposals on a street photo, waiting for review, with their provenance in the inspector">
+</picture>
+</a>
+
+**[AI Annotation Workbench](https://github.com/pntrungbk15/annotation-workbench-showcase)** labels images and video
+for computer vision: boxes, rotated boxes, polygons, keypoints and tags. 16 local ONNX models across 11 task families
+propose annotations on a laptop CPU, and nothing is exported until a person accepts it. It evaluates models with each
+task's metric and exports YOLO, COCO, DOTA, MOT and PaddleOCR.
+
+<a href="https://github.com/pntrungbk15/chessforge-showcase">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/projects/chessforge-dark-narrow.webp">
+  <source media="(max-width: 600px)" srcset="assets/projects/chessforge-light-narrow.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/projects/chessforge-dark.webp">
+  <img src="assets/projects/chessforge-light.webp" width="100%" alt="ChessForge: the AI Lab with a policy/value network training run, its losses and the job queue">
+</picture>
+</a>
+
+**[ChessForge](https://github.com/pntrungbk15/chessforge-showcase)** is a local chess workstation: play and review
+games with Stockfish, train with puzzles and opening drills, and keep a game library. Its AI Lab trains a PyTorch
+policy/value network in a separate process, runs MCTS self-play, evaluates checkpoints and lets you play against your
+own models.
+
+<a href="https://github.com/pntrungbk15/audio-story-showcase">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/projects/audio-story-dark-narrow.webp">
+  <source media="(max-width: 600px)" srcset="assets/projects/audio-story-light-narrow.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/projects/audio-story-dark.webp">
+  <img src="assets/projects/audio-story-light.webp" width="100%" alt="Audio Story: the Script page with scenes and their audio state, the script with speakers and delivery notes, the line inspector and the scene's waveform">
+</picture>
+</a>
+
+**[Audio Story](https://github.com/pntrungbk15/audio-story-showcase)** produces narrated audio stories, Vietnamese
+first. The author plans, casts and writes with an OpenAI-compatible LLM whose proposals they accept or reject; local
+text-to-speech (VieNeu-TTS, Piper) voices each line, and episodes are mixed to BS.1770 loudness and exported as a
+package ready for YouTube.
 
 <img src="assets/divider.svg" width="100%" alt="">
 

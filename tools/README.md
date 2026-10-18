@@ -27,6 +27,14 @@ curl -o tools/shots/comic-editor-dark.jpg $R/comic-translator-showcase/main/asse
 curl -o tools/shots/comic-editor.jpg      $R/comic-translator-showcase/main/assets/comic-editor.jpg
 curl -o tools/shots/vli-graph_relations-dark.png  $R/vietnamese-legal-intelligence-showcase/main/docs/images/graph_relations_dark.png
 curl -o tools/shots/vli-graph_relations-light.png $R/vietnamese-legal-intelligence-showcase/main/docs/images/graph_relations_light.png
+curl -o tools/shots/fds-result-dark.png  $R/fluent-data-studio/main/docs/images/03-result-dark.png
+curl -o tools/shots/fds-result-light.png $R/fluent-data-studio/main/docs/images/03-result-light.png
+curl -o tools/shots/aw-segmentation-light.png $R/annotation-workbench-showcase/main/docs/images/07-annotate-segmentation-light.png
+curl -o tools/shots/aw-detection-light.png    $R/annotation-workbench-showcase/main/docs/images/02-annotate-detection-light.png
+curl -o tools/shots/chess-analysis-dark.png $R/chessforge-showcase/main/assets/chess-analysis-dark.png
+curl -o tools/shots/chess-lab.png           $R/chessforge-showcase/main/assets/chess-lab.png
+curl -o tools/shots/audio-script-review-dark.png $R/audio-story-showcase/main/assets/script-review-dark.png
+curl -o tools/shots/audio-script-light.png       $R/audio-story-showcase/main/assets/script-light.png
 curl -o tools/shots/docflow-extraction-dark.png  $R/docflow-idp/main/assets/screenshots/09_extraction_workspace_dark.png
 curl -o tools/shots/docflow-extraction-light.png $R/docflow-idp/main/assets/screenshots/03_extraction_workspace.png
 curl -o tools/shots/tshirt-inspection-dark.png $R/tshirt-quality-in/main/assets/screenshots/hero-inspection-dark.png
