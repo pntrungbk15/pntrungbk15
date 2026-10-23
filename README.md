@@ -109,14 +109,15 @@ task's metric and exports YOLO, COCO, DOTA, MOT and PaddleOCR.
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/projects/chessforge-dark-narrow.webp">
   <source media="(max-width: 600px)" srcset="assets/projects/chessforge-light-narrow.webp">
   <source media="(prefers-color-scheme: dark)" srcset="assets/projects/chessforge-dark.webp">
-  <img src="assets/projects/chessforge-light.webp" width="100%" alt="ChessForge: the AI Lab with a policy/value network training run, its losses and the job queue">
+  <img src="assets/projects/chessforge-light.webp" width="100%" alt="ChessForge: the sculpted ivory and obsidian chess set on a marble board in a torchlit hall">
 </picture>
 </a>
 
-**[ChessForge](https://github.com/pntrungbk15/chessforge-showcase)** is a local chess workstation: play and review
-games with Stockfish, train with puzzles and opening drills, and keep a game library. Its AI Lab trains a PyTorch
-policy/value network in a separate process, runs MCTS self-play, evaluates checkpoints and lets you play against your
-own models.
+**[ChessForge](https://github.com/pntrungbk15/chessforge-showcase)** is a 3D chess game and chess workstation. Its
+own OpenGL renderer draws an original sculpted set in a torchlit hall, with a twelve-mission campaign and a cosmetic
+collection. It also reviews games with Stockfish, trains with puzzles and opening drills, and keeps a game library;
+its AI Lab trains a PyTorch policy/value network in a separate process, runs MCTS self-play and lets you play
+against your own models.
 
 <a href="https://github.com/pntrungbk15/audio-story-showcase">
 <picture>
