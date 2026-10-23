@@ -32,7 +32,7 @@ curl -o tools/shots/fds-result-light.png $R/fluent-data-studio/main/docs/images/
 curl -o tools/shots/aw-segmentation-light.png $R/annotation-workbench-showcase/main/docs/images/07-annotate-segmentation-light.png
 curl -o tools/shots/aw-detection-light.png    $R/annotation-workbench-showcase/main/docs/images/02-annotate-detection-light.png
 curl -o tools/shots/chess-mission-3d.png $R/chessforge-showcase/main/assets/chess-mission-3d.png
-curl -o tools/shots/chess-3d-arena.jpg   $R/chessforge-showcase/main/assets/chess-3d-arena.jpg
+curl -o tools/shots/chess-3d-boards.jpg  $R/chessforge-showcase/main/assets/chess-3d-boards.jpg
 curl -o tools/shots/audio-script-review-dark.png $R/audio-story-showcase/main/assets/script-review-dark.png
 curl -o tools/shots/audio-script-light.png       $R/audio-story-showcase/main/assets/script-light.png
 curl -o tools/shots/docflow-extraction-dark.png  $R/docflow-idp/main/assets/screenshots/09_extraction_workspace_dark.png
